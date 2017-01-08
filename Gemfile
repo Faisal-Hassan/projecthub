@@ -52,3 +52,6 @@ group :development do
   gem 'spring'
 end
 
+
+gem 'recaptcha', require: 'recaptcha/rails'
+gem 'activerecord-session_store', github: 'rails/activerecord-session_store'
