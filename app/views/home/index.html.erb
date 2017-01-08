@@ -1,2 +1,42 @@
-<h1>Home#index</h1>
-<p>Find me in app/views/home/index.html.erb</p>
+<% if current_user %>
+  <h3>Organization: <%= @tenant.name %></h3>
+<% else %>
+<div class="jumbotron text-center">
+		<h1>Welcome to Project Hub</h1>
+		<h3>
+			the perfect software to manage your projects on demand
+		</h3>
+		<br />
+</div>
+
+<div class="row">
+	<div class="col-md-6 text-center">
+		<div class="well">
+			<h2>Basic Plan</h2>
+			<h4>Free</h4>
+			<h4>Unlimited file uploads</h4>
+			<h4>Access anywhere</h4>
+			<h4>One project</h4>
+			<br />
+			<div class="form-group">
+			  <%= link_to 'Sign Up', new_user_registration_path(plan: 'free'), class: 'btn btn-success btn-lg' %>
+			</div>
+		</div>
+	</div>
+	
+	<div class="col-md-6 text-center">
+		<div class="well">
+			<h2>Pro Membership</h2>
+			<h4>$10/month</h4>
+			<h4>Unlimited file uploads</h4>
+			<h4>Access anywhere</h4>
+			<h4>Unlimited projects</h4>
+
+			<br />
+			<div class="form-group">
+			  <%= link_to 'Sign Up', new_user_registration_path(plan: 'premium'), class: 'btn btn-primary btn-lg' %>
+			</div>
+		</div>
+	</div>
+</div>
+<% end %>
