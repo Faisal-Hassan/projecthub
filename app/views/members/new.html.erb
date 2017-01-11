@@ -1,10 +1,10 @@
 <% model_class = Member %>
 <div class="page-header">
-  <h1><%=t '.title',  :default => [:'helpers.titles.new', 'Invite New %{model}', 
+  <h1><%=t '.title', :default => [:'helpers.titles.new', 'Invite New %{model}'], 
                       :model => model_class.model_name.human.titleize %></h1>
 </div>
 
-<%= form_for(member, :html => { :class => "form login"}) do |f| %>
+<%= form_for(@member, :html => { :class => "form login"}) do |f| %>
 <% if @member.errors.any? %>
 <div id="error_expl" class="panel panel-danger">
   <div class="panel-heading">

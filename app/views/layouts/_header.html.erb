@@ -17,8 +17,7 @@
 		  <ul class="nav navbar-nav navbar-right">
 		    <% if current_user %>
 		    <li>
-		    	<%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path, 
-											class: 'navbar-link btn btn-primary' %>
+		    	<%= link_to "<i class='fa fa-users'></i> Add Members".html_safe, new_member_path %>
 		    </li>
 		      <li>
 		        <%= link_to ('<i class="fa fa-user"></i> ' + truncate(current_user.email, length: 25)).html_safe, 

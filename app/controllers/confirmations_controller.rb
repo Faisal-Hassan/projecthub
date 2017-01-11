@@ -3,7 +3,7 @@ class ConfirmationsController < Milia::ConfirmationsController
     if @confirmable.attempt_set_password(user_params)
       
       self.resource = resource_class.confirm_by_token(params[:confirmation_token])
-      yield resource if block_given
+      yield resource if block_given?
       
       if resource.errors.empty?
         log_action( "invitee confirmed" )
@@ -33,7 +33,7 @@ class ConfirmationsController < Milia::ConfirmationsController
       yield resource if block_given?
       
       if resource.errors.empty?
-        set_flash_message(:notice, :confirmed) if _is_flashing_format?
+        set_flash_message(:notice, :confirmed) if is_flashing_format?
       end
       if @confirmable.skip_confirm_change_password
         sign_in_tenanted_and_redirect(resource)
