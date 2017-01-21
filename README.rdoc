@@ -1,4 +1,5 @@
-Project Hub
+ProjectHub
 
 A project management saas app to manage all your projects in one place.
+
 
