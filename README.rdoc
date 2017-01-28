@@ -3,3 +3,6 @@ ProjectHub
 A project management saas app to manage all your projects in one place.
 
 
+Made by:
+
+Faisal Hassan - 01/07-2017
