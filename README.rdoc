@@ -1,6 +1,7 @@
 ProjectHub
 
-A project management saas app to manage all your projects in one place.
+A project management saas app to manage all your projects in one place. Built
+with Ruby on Rails.
 
 
 Made by:
